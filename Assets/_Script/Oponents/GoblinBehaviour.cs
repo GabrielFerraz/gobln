@@ -11,8 +11,6 @@ namespace _Script.Oponents
     private float _distractedDuration;
     private Animator _animator;
 
-    public Action<GoblinBehaviour> onAvailableClick;
-
     private void Start()
     {
       _animator = gameObject.GetComponent<Animator>();
