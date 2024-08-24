@@ -25,11 +25,20 @@ public class PlayerHand : MonoBehaviour
 
     private void SpriteYourCards()
     {
-        for(int i =0; i<player.cardsHeld; i++)
-        {
-            int naipe = (int)playersHand[i].cardNaipe;
-            int numero = playersHand[i].number;
-            cardPannels[i].GetComponent<SpriteRenderer>().sprite = cardSprites[(naipe-1)*4+numero];
+        if (PassingCard.turnIndex == 0)
+        {  
+            for (int i = 0; i < player.cardsHeld; i++)
+            {
+                int naipe = (int)playersHand[i].cardNaipe;
+                int numero = playersHand[i].number;
+                cardPannels[i].GetComponent<SpriteRenderer>().sprite = cardSprites[(naipe - 1) * 4 + numero];
+            }
         }
+        
+    }
+
+    private void OnMouseDown()
+    {
+        
     }
 }
