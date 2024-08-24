@@ -52,9 +52,18 @@ namespace _Script.Oponents
     /// <summary>
     ///   <para>Toggles the animation to show if the goblin can be distracted</para>
     /// </summary>
-    public void ToggleAvailable()
+    public void ToggleAvailableToDistract()
     {
       if (_distracted) return;
+      _available = !_available;
+      _animator.SetBool("Available", _available);
+    }
+
+    /// <summary>
+    ///   <para>Toggles the animation to show if the goblin can be cheated on</para>
+    /// </summary>
+    public void ToggleAvailableToCheat()
+    {
       _available = !_available;
       _animator.SetBool("Available", _available);
     }
@@ -69,6 +78,13 @@ namespace _Script.Oponents
       if (_distracted)
       {
         _distrustLvl += amount < 0 ? 1 : -1;
+      }
+
+      Debug.Log("Goblin distrust " + _distrustLvl);
+
+      if (_distrustLvl >= 5)
+      {
+        //TODO call Game Over
       }
     }
   }
