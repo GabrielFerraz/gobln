@@ -19,22 +19,22 @@ public class PlayerHand : MonoBehaviour
     void Update()
     {
         
-        if(true)//colocar alguma condição aqui depois
+        if(PassingCard.turnIndex ==0)//colocar alguma condição aqui depois
             SpriteYourCards();
+        else
+            cardPannels[4].GetComponent<SpriteRenderer>().enabled = false;
     }
 
     private void SpriteYourCards()
     {
-        if (PassingCard.turnIndex == 0)
-        {  
+            cardPannels[4].GetComponent<SpriteRenderer>().enabled = true;
+
             for (int i = 0; i < player.cardsHeld; i++)
             {
                 int naipe = (int)playersHand[i].cardNaipe;
                 int numero = playersHand[i].number;
                 cardPannels[i].GetComponent<SpriteRenderer>().sprite = cardSprites[(naipe - 1) * 4 + numero];
             }
-        }
-        
     }
 
     private void OnMouseDown()

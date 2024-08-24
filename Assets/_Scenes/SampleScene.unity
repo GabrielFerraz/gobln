@@ -1107,10 +1107,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1707022261}
   - {fileID: 188479368}
   - {fileID: 1882981219}
   - {fileID: 1211660801}
-  - {fileID: 1707022261}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679285815
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1707022260}
-  pannelNumber: 3
+  pannelNumber: 2
 --- !u!61 &679285819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1707022260}
-  pannelNumber: 4
+  pannelNumber: 3
 --- !u!61 &1054194420
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2092,7 +2092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1707022260}
-  pannelNumber: 5
+  pannelNumber: 4
 --- !u!61 &1264074963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1707022260}
-  pannelNumber: 2
+  pannelNumber: 1
 --- !u!61 &1380629790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2777,7 +2777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1707022260}
-  pannelNumber: 1
+  pannelNumber: 0
 --- !u!61 &1932891876
 BoxCollider2D:
   m_ObjectHideFlags: 0

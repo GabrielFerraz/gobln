@@ -57,12 +57,23 @@ public class PassingCard : MonoBehaviour
     {
         passAnim = true;
 
-        goblinList[turnIndex+1].GetComponent<Character>().cardsHand[4] = c;
+        Character nextGoblin = goblinList[turnIndex + 1].GetComponent<Character>();
+        Character actualGoblin = goblinList[turnIndex].GetComponent<Character>();
+        
+        for(int j = 0; j <4; j++)
+            Debug.Log(actualGoblin.cardsHand[j].cardNaipe + " de "+ actualGoblin.cardsHand[j].cardNaipe + ", ");
 
-        goblinList[turnIndex].GetComponent<Character>().cardsHand[i-1] = goblinList[turnIndex].GetComponent<Character>().cardsHand[4];
-        goblinList[turnIndex].GetComponent<Character>().cardsHand[4] = null;
+        nextGoblin.cardsHand[4] = c;
 
-        Debug.Log("Passing");
+        actualGoblin.cardsHand[i] = actualGoblin.cardsHand[4];
+        actualGoblin.cardsHand[4] = null;
+        actualGoblin.cardsHeld--;
+        nextGoblin.cardsHeld++;
+
+        Debug.Log("Nova mão:");
+        for (int j = 0; j < 4; j++)
+            Debug.Log(actualGoblin.cardsHand[j].number + " de " + actualGoblin.cardsHand[j].cardNaipe + ", ");
+
     }
 
     //jogador termina o turno, Pass card

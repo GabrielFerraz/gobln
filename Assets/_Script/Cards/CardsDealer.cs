@@ -52,7 +52,7 @@ public class CardsDealer : MonoBehaviour
             }
             while (goblinScript.handIsFull && i < cardsDeck.Length-1);
 
-            Debug.Log("i: " + i);
+            //Debug.Log("i: " + i);
 
             goblinScript.cardsHand[goblinScript.cardsHeld] = cardsDeck[i];
             goblinScript.cardsHeld++;
