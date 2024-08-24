@@ -14,9 +14,11 @@ public class Cards
     };
     public int number;
     public Naipe cardNaipe;
-    public Cards(int n, Naipe p )
+    public string cardSpritePath;
+    public Cards(int n, Naipe p, string s )
     {
         number = n;
         cardNaipe = p;
+        cardSpritePath = s;
     }
 }
