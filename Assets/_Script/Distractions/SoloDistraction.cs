@@ -86,7 +86,7 @@ public class SoloDistraction : MonoBehaviour
         {
             if (!goblin.IsDistracted())
             {
-                goblin.ToggleAvailable();
+                goblin.ToggleAvailableToDistract();
             }
         }
     }
